@@ -1,0 +1,12 @@
+aclocal.m4
+autom4te.cache/
+config.*
+configure
+.deps/
+libini*
+.libs/
+libtool
+m4/
+Makefile
+Makefile.in
+stamp-h1
