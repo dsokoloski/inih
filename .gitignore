@@ -2,11 +2,15 @@ aclocal.m4
 autom4te.cache/
 config.*
 configure
+depcomp
 .deps/
+install-sh
 libini*
 .libs/
 libtool
+ltmain.sh
 m4/
 Makefile
 Makefile.in
+missing
 stamp-h1
