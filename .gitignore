@@ -3,6 +3,7 @@ autom4te.cache/
 compile
 config.*
 configure
+cpp/.dirstamp
 depcomp
 .deps/
 install-sh
