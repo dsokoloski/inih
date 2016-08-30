@@ -3,7 +3,7 @@
 
 AC_PREREQ([2.63])
 AC_INIT([inih], [1.0], [http://www.clearfoundation.com/docs/developer/bug_tracker/])
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([subdir-objects])
 AC_CONFIG_SRCDIR([ini.c])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
