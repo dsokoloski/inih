@@ -6,7 +6,7 @@ EXTRA_DIST = ini.h cpp/INIReader.h
 AM_CFLAGS = ${CFLAGS}
 AM_CXXFLAGS = ${CXXFLAGS}
 
-lib_LTLIBRARIES = libini.la libinic.la
+noinst_LTLIBRARIES = libini.la libinic.la
 
 libini_la_SOURCES = ini.c cpp/INIReader.cpp
 libini_la_CFLAGS = ${AM_CFLAGS}
