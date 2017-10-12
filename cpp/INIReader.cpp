@@ -61,6 +61,21 @@ bool INIReader::GetBoolean(string section, string name, bool default_value)
         return default_value;
 }
 
+void INIReader::GetSection(string section, std::map<string, string> &values)
+{
+    string key_prefix = section;
+    key_prefix += "=";
+
+    size_t key_prefix_len = key_prefix.size();
+
+    values.clear();
+    for (std::map<string, string>::const_iterator i = _values.begin();
+        i != _values.end(); i++) {
+        if (i->first.compare(0, key_prefix_len, key_prefix)) continue;
+        values[i->first.substr(i->first.find_first_of('=') + 1)] = i->second;
+    }
+}
+
 string INIReader::MakeKey(string section, string name)
 {
     string key = section + "=" + name;

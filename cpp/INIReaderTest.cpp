@@ -17,5 +17,15 @@ int main()
               << reader.Get("user", "email", "UNKNOWN") << ", pi="
               << reader.GetReal("user", "pi", -1) << ", active="
               << reader.GetBoolean("user", "active", true) << "\n";
+
+    std::map<std::string, std::string> section_kvp;
+    std::map<std::string, std::string>::const_iterator i;
+
+    reader.GetSection("user", section_kvp);
+    std::cout << "Entries found in [user]: " << section_kvp.size() << std::endl;
+
+    for (i = section_kvp.begin(); i != section_kvp.end(); i++)
+        std::cout << i->first << " = " << i->second << std::endl;
+
     return 0;
 }

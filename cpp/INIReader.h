@@ -42,6 +42,9 @@ public:
     // and valid false values are "false", "no", "off", "0" (not case sensitive).
     bool GetBoolean(std::string section, std::string name, bool default_value);
 
+    // Get all key/value pairs in a given section.
+    void GetSection(std::string section, std::map<std::string, std::string> &values);
+
 private:
     int _error;
     std::map<std::string, std::string> _values;
